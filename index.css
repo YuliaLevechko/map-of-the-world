@@ -1,0 +1,110 @@
+:root {
+    --green: #40d340;
+    --black: black;
+    --white: white;
+    --color-btn: #62b4e5;
+    --dark-gray: #2e2d2d;
+}
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 0  15px;
+}
+/* block-1 */
+.block-1 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+}
+
+.block-1-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 0;
+    position: absolute;
+}
+
+.block-1-title {
+    color: var(--green);
+    font-size: 26px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+}
+
+.block-1-descr {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.block-1-btn {
+    background-color: var(--color-btn);
+    color: var(--white);
+    width: 225px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.block-1-img {
+    padding-top: 80px;
+}
+
+/* media-запити */
+@media screen and (min-width: 320px){
+    .container {
+        width: 320px;
+    }
+}
+@media screen and (min-width: 768px){
+    .container {
+        width: 768px;
+        padding: 0 32px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .container {
+        width: 1280;
+        padding: 0 52px;
+    }
+}
