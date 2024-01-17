@@ -1,10 +1,12 @@
 :root {
-    --green: #40d340;
+    --green: #8dd340;
     --black: black;
     --white: white;
     --color-btn: #62b4e5;
     --dark-gray: #2e2d2d;
+    --bg-color: #ebe8e89c;
 }
+
 /* Reset styles */
 h1,
 h2,
@@ -40,14 +42,18 @@ img {
     max-width: 100%;
     height: auto;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
 }
 
 .container {
     width: 100%;
-    padding: 0  15px;
+    padding: 10px  15px;
 }
+
+
 /* block-1 */
 .block-1 {
     display: flex;
@@ -59,21 +65,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    top: 0;
-    position: absolute;
+    width: 100%;
 }
 
 .block-1-title {
     color: var(--green);
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.5;
     text-transform: uppercase;
-    margin-bottom: 200px;
 }
 
 .block-1-descr {
     font-size: 16px;
-    padding: 0 10px;
 }
 
 .block-1-btn {
@@ -86,25 +89,74 @@ body {
     margin: 0 auto;
 }
 
-.block-1-img {
-    padding-top: 80px;
+.block-1-btn:hover, .block-1-btn:focus, .block-1-btn:active {
+    background-color: var(--dark-gray);
+    box-shadow: 2px 5px 10px 1px rgb(0 0 0 / 31%);
+    transition: 1000ms;
 }
+
+/* block-2 */
+
+
 
 /* media-запити */
 @media screen and (min-width: 320px){
     .container {
         width: 320px;
     }
+    .block-1-info {
+        width: 290px;
+    }
 }
+
 @media screen and (min-width: 768px){
     .container {
         width: 768px;
-        padding: 0 32px;
+        padding: 10px 32px;
+    }
+    .block-1 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .block-1-info {
+        width: 340px;
+    }
+    .block-1-title {
+        font-size: 28px;
+    }
+    .block-1-descr {
+        font-size: 18px;
+    }
+    .block-1-btn {
+        margin: 0;
+    }
+    .block-1-img {
+        width: 340px;
     }
 }
+
 @media screen and (min-width: 1280px){
     .container {
-        width: 1280;
-        padding: 0 52px;
+        width: 1280px;
+        padding: 10px 52px;
+    }
+    .block-1-info {
+        width: 540px;
+        justify-content: space-evenly;
+    }
+    .block-1-title {
+        font-size: 38px;
+    }
+    .block-1-descr {
+        font-size: 22px;
+        width: 525px;
+    }
+    .block-1-btn {
+        font-size: 18px;
+        padding: 15px;
+        width: 270px;
+    }
+    .block-1-img {
+        width: 590px;
     }
 }
