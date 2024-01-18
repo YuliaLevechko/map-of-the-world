@@ -5,7 +5,8 @@
     --color-btn: #62b4e5;
     --dark-gray: #2e2d2d;
     --bg-color: #ebe8e89c;
-    --accent-yellow: #ebeb13;
+    --accent-yellow: #fcfc3b;
+    --bg-gradient: linear-gradient(rgba(255, 255, 255, 0.856), rgba(255, 255, 255, 0.829));
 }
 
 /* Reset styles */
@@ -53,7 +54,6 @@ body {
     padding: 10px  15px;
     margin: 0 auto;
 }
-
 
 /* block-1 */
 .common-block {
@@ -106,7 +106,6 @@ body {
 }
 
 .block-2-title {
-    width: 210px;
     color: var(--green);
     font-size: 18px;
     line-height: 1.5;
@@ -153,6 +152,58 @@ body {
     color: var(--dark-gray);
 }
 
+/* block-3 */
+.block-3 {
+    background-color: var(--bg-color);
+    background-image: var(--bg-gradient), url(https://woodgoods.com.ua/wp-content/uploads/2022/05/016793a9-fbc4-4783-9249-1401396a20f9-scaled.jpg.webp);
+}
+
+.block-3-wrap-title {
+    margin-bottom: 20px;
+}
+
+.block-3-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.block-3-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-3-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .7s ease-in-out;
+}
+
+.block-3-photo:hover img, .block-3-photo:focus img, .block-3-photo:active img {
+    transform: scale(1.05);
+}
+.block-3-photo:hover span, .block-3-photo:focus span, .block-3-photo:active span {
+    transform: scale(1);
+    background-color: var(--dark-gray);
+    color: var(--accent-yellow);
+}
+
+.block-3-number {
+    margin: -30px auto 0;
+    background-color: var(--accent-yellow);
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 15px 25px;
+}
+
+.block-3-descr {
+    font-size: 14px;
+    padding: 10px 0;
+}
+
 
 /* media-запити */
 @media screen and (min-width: 320px){
@@ -179,7 +230,7 @@ body {
 @media screen and (min-width: 768px){
     .container {
         width: 768px;
-        padding: 10px 32px;
+        padding: 10px 32px 20px;
     }
 
 /* block-1 */
@@ -228,12 +279,33 @@ body {
     .block-2-size-descr {
         font-size: 18px;
     }
+
+/* block-3 */
+    .block-3-wrap-title {
+        margin-top: -10px;
+    }
+
+    .block-3-list {
+        column-gap: 24px;
+        row-gap: 22px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .block-3-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .block-3-descr {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 1280px){
     .container {
         width: 1280px;
-        padding: 10px 52px;
+        padding: 10px 52px 50px;
     }
 
 /* block-1 */
@@ -273,5 +345,25 @@ body {
 
     .block-2-size-descr {
         font-size: 22px;
+    }
+
+/* block-3 */
+    .block-3-list {
+        column-gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+    .block-3-item {
+        width: calc((100% - 24px) / 3);
+    }
+
+    .block-3-number {
+        font-size: 32px;
+        padding: 20px 30px;
+        margin-top: -35px;
+    }
+
+    .block-3-descr {
+        font-size: 18px;
     }
 }
