@@ -305,7 +305,7 @@ body {
 @media screen and (min-width: 1280px){
     .container {
         width: 1280px;
-        padding: 10px 52px 50px;
+        padding: 10px 52px;
     }
 
 /* block-1 */
@@ -337,6 +337,7 @@ body {
 
     .block-2-list {
         flex-wrap: nowrap;
+        padding-bottom: 20px;
     }
 
     .block-2-size {
